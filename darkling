@@ -1,0 +1,118 @@
+@import url("https://use.typekit.net/bsg4lmc.css");
+@import url("https://kit.fontawesome.com/344a780755.js");
+.bone br {display: none; }
+.bone-post br {display: inherit; }
+
+.bone-moon {
+    --bmain: rgb(90 90 90);
+    --bipost: url("https://i.imgur.com/UL0pvfE.png");
+    --bspace: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bone-sun {
+    --bmain: rgb(158 119 81); 
+    --bipost: url("https://i.imgur.com/SH1Adva.png");
+    --bspace: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bone {
+    --bback: rgb(18 18 18);
+    --bfont: 'fredericka-the-greatest', serif;
+    --bsub: 'liebelotte', sans-serif;
+    --bpost: 'elza', sans-serif;
+    --bsize: 175px;
+    
+    width: 420px;
+    min-height: 200px;
+    background: var(--bback);
+    margin: 20px auto;
+    outline: 2px ridge var(--bmain);
+    outline-offset: 3px;
+    background-image:  radial-gradient(var(--bmain) 0.5px, transparent 0.5px), radial-gradient(var(--bmain) 0.5px, var(--bback) 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    padding: 50px;
+}
+
+.bone-post {
+    background: var(--bback);
+    padding: 20px;
+    font-family: var(--bpost);
+    line-height: normal;
+    font-size: 12px;
+    hyphens: auto;
+    position: relative;
+    z-index: 1;
+    color: var(--bmain);
+    text-align: justify;
+}
+
+.bone-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bone-header {
+    text-shadow: 2px 2px 2px var(--bback);
+    display: flex;
+    column-gap: 20px;
+    text-align: center;
+}
+
+.bone-title span {
+    color: var(--bmain);
+    font-family: var(--bfont);
+    font-size: 28px;
+    text-transform: lowercase;
+}
+
+.bone-title strong {
+    color: var(--bmain);
+    font-family: var(--bpost);
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.bone-profile {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: var(--bmain);
+    flex-shrink: 0;
+    outline: 1px ridge var(--bmain);
+    outline-offset: 3px;
+}
+
+.bone-profile img {
+    width: 80px;
+    height: 80px;
+}
+
+.bone-image {
+    width: 420px;
+    height: var(--bsize);
+    display: inline-block;
+    background: var(--bmain);
+    -webkit-mask: var(--bipost);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask: var(--bipost);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    margin-bottom: var(--bspace);
+    margin-top: var(--bspace);
+    position: relative;
+    z-index: 0;
+}
+
+.bspace {display: block; height: 30px;}
